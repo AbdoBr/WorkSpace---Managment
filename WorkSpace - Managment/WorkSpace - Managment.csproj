@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>WorkSpace___Managment</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="MongoDB.Driver" Version="2.25.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Repositories\" />
+    <None Remove="Repositories\SnacksRepositories\" />
+    <None Remove="Repositories\StudentRepository\" />
+    <None Remove="Models\SnacksModel\" />
+    <None Remove="Models\StudentModel\" />
+    <None Remove="Controllers\StudentController\" />
+    <None Remove="Controllers\SnackController\" />
+    <None Remove="Repositories\Bookings\" />
+    <None Remove="Models\BookingsModel\" />
+    <None Remove="Controllers\Booking\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+    <Folder Include="Repositories\SnacksRepositories\" />
+    <Folder Include="Repositories\StudentRepository\" />
+    <Folder Include="Models\SnacksModel\" />
+    <Folder Include="Models\StudentModel\" />
+    <Folder Include="Controllers\StudentController\" />
+    <Folder Include="Controllers\SnackController\" />
+    <Folder Include="Repositories\Bookings\" />
+    <Folder Include="Models\BookingsModel\" />
+    <Folder Include="Controllers\Booking\" />
+  </ItemGroup>
+</Project>
